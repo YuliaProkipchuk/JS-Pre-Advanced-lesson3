@@ -6,7 +6,6 @@ CoffeMake.prototype.off = function(){
     console.log('Stop making coffee');
 }
 function DripCoffeeMaker(seconds=1000){
-    CoffeMake.call(this);
     temperature = Math.round(Math.random()*100);
     this.seconds = seconds;
 
@@ -27,7 +26,6 @@ DripCoffeeMaker.prototype.timer = function(){
 }
 
 function HornCoffeeMaker(whip=false){
-    CoffeMake.call(this);
     this.whip=whip;
 
 }
@@ -43,7 +41,6 @@ HornCoffeeMaker.prototype.whipMilk = function(){
 
 
 function CoffeMachine(drinkChoice = 'Espresso'){
-    CoffeMake.call(this);
     coffeeDrinks = ["Espresso", "Americano", "Latte", "Cappuccino", "Dopio"];
     this.drinkChoice = drinkChoice;
 
