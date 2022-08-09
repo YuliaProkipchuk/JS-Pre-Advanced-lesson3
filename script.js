@@ -7,7 +7,7 @@ CoffeMake.prototype.off = function(){
 }
 function DripCoffeeMaker(seconds=1000){
     CoffeMake.call(this);
-    this.temperature = Math.round(Math.random()*100);
+    temperature = Math.round(Math.random()*100);
     this.seconds = seconds;
 
 }
@@ -15,8 +15,8 @@ DripCoffeeMaker.prototype = Object.create(CoffeMake.prototype);
 DripCoffeeMaker.prototype.constructor = DripCoffeeMaker;
 
 DripCoffeeMaker.prototype.showTemperature = function(){
-    console.log(`Temperature is: ${this.temperature}`);
-    if(this.temperature==100){
+    console.log(`Temperature is: ${temperature}`);
+    if(temperature==100){
         this.off();
     }
 }
@@ -44,7 +44,7 @@ HornCoffeeMaker.prototype.whipMilk = function(){
 
 function CoffeMachine(drinkChoice = 'Espresso'){
     CoffeMake.call(this);
-    this.coffeeDrinks = ["Espresso", "Americano", "Latte", "Cappuccino", "Dopio"];
+    coffeeDrinks = ["Espresso", "Americano", "Latte", "Cappuccino", "Dopio"];
     this.drinkChoice = drinkChoice;
 
 }
@@ -52,7 +52,7 @@ CoffeMachine.prototype = Object.create(CoffeMake.prototype);
 CoffeMachine.prototype.constructor = CoffeMachine;
 
 CoffeMachine.prototype.coffeeChoice = function(){
-    if(this.coffeeDrinks.includes( this.drinkChoice)){
+    if(coffeeDrinks.includes( this.drinkChoice)){
         console.log(`You chose: ${this.drinkChoice}`);
     }
     else{
