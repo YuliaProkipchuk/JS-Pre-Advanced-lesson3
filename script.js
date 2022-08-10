@@ -21,7 +21,7 @@ DripCoffeeMaker.prototype.showTemperature = function(){
 }
 DripCoffeeMaker.prototype.timer = function(){
     console.log(`Coffee preparation will start in ${this.seconds/1000} seconds`);
-    setTimeout(this.on, this.timer);
+    setTimeout(this.on, this.seconds);
    
 }
 
